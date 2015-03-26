@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>
+EWS::Contact Us
+</title>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<script src="jquery-1.11.1.js"></script>
+ <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYz0C2E0zzEZi0YFo3ZrVYYdz_LnVEi2Q">
+    </script>
+   
+     <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: { lat:  28.737795, lng: 77.111977},
+          zoom:14
+        };
+        
+       
+      
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+              var marker = new google.maps.Marker
+(
+    {
+        position: new google.maps.LatLng(28.737795, 77.111977 ),
+        map: map,
+        title: 'Click me'
+    }
+);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+<body   >
+		<div class="container-fluid" style="background:white;">
+				<div class="row navbar">
+				  <div class="col-xs-12">
+				  		                           <nav>
+																 <div class="navbar-header pull-left">
+																      <a class="navbar-brand" href="home.html" style="font-size:40px;">EASY WAY SCIENCE</a>
+																  </div>
+				      												
+				      											<div class="pull-right">	
+																		  <ul class="nav nav-tabs">
+
+																		  <li role="presentation" ><a href="home.html">Home</a></li>
+																		  <li role="presentation" ><a href="thisweek.html">This week's program</a></li>
+																		  <li role="presentation" ><a href="register.php"> Register Now</a></li>
+																		  <li  role="presentation" class="active"><a href="#">Contact Us</a></li>
+																		</ul>
+																	</div>
+													</nav>
+				  </div>
+				</div>	
+
+				<div class="row" >
+					<div class=" col-xs-6 " style="height:570px;">
+						
+							<div id="addresscss">
+							BHAGWAN PARSHURAM INSTITUTE OF TECHNOLOGY
+							
+							
+							PSP- 4, Dr. K.N. Katju Marg , Sector 17 Rohini,<br> 
+							New Delhi -110089<br>
+							<br>
+							Tel: 011 - 27572900 , 27571080<br>
+							<br>
+							        011 - 27574635 , 27574637 (10 lines)
+							Fax: 011-27574642 <br>
+							<br>
+							Email: bpitindia@yahoo.com<br>
+									<br>
+							<a href="http://www.facebook.com" target="_blank">	<img src="images/fb.jpg" class="imagecontact"></a>
+
+								<a href="http://www.twitter.com" target="_blank">		<img src="images/twitter.png" class="imagecontact">    </a>
+
+								   <a href="http://www.googleplus.com" target="_blank">	<img src="images/gplus.png" class="imagecontact">    </a>
+							</div>
+
+							
+								
+					</div>
+
+					<div class=" col-xs-6" style="height:500px;;">
+						
+						<div id="map-canvas">
+
+						</div>
+					</div>
+				</div>
+
+		</div>	
+
+
+
+
+
+</body>
+</html>
