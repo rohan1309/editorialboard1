@@ -1,0 +1,157 @@
+<html>
+	<head>
+   		<title>
+   			EWS::HOME
+   		</title>
+
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="jquery-1.11.1.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="container-fluid"  >
+				
+				<div class="row" >
+				
+						<div class="col-xs-12">
+									<div class="row navbar" >
+											<div class="col-xs-12">	
+												<nav>
+																 <div class="navbar-header pull-left">
+																      <a class="navbar-brand" href="#" style="font-size:40px;">EASY WAY SCIENCE</a>
+																  </div>
+				      												
+				      											<div class="pull-right">	
+																		  <ul class="nav nav-tabs">
+
+																		  <li role="presentation" class="active"><a href="#">Home</a></li>
+																		  <li role="presentation"><a href="thisweek.html">This week's program</a></li>
+																		  <li role="presentation"><a href="register.php"> Register Now</a></li>
+																		  <li  role="presentation"><a href="contact.html">Contact Us</a></li>
+																		</ul>
+																	</div>
+													</nav>
+											</div>	
+									 </div>	
+
+
+
+									<div class="row" style="" id="imagespacerow">
+										
+										 <div class="col-xs-offset-2 col-xs-8 text-center" id="imagespacecol">
+												     <img id="image1" src=" images/ews1.jpg" class="imagehome"/>
+													 <img id="image2" src=" images/ews2.jpg" class="imagehome"/>
+												    <img  id="image3" onload="imagesChange(1)"class="imagehome" src=" images/ews3.jpg" >
+												
+												<div class="dots" id="dot1" onclick="imagesChange(3)">
+												</div>
+												
+													<div class="dots" id="dot2" onclick="imagesChange(1)">
+												</div>
+
+												<div class="dots" id="dot3" onclick="imagesChange(2)">
+												</div>
+
+												
+													
+														
+														
+										   				
+                                           </div>  
+									 </div>
+
+
+
+										<div class="row text-center"   >
+											         	<div class="col-xs-offset-2 col-xs-8">
+																	
+														     <h1 class="headingcss" >	
+
+														     EASY WAY SCIENCE
+														     
+														     </h1>
+
+
+												        </div>
+												        
+												        <div class="col-xs-offset-1 col-xs-10 homecontent" >
+												        	In order to provide the best possible experience to old and buggy browsers, Font Awesome uses CSS browser hacks in several places to target special CSS to certain browser versions in order to work around bugs in the browsers themselves. These hacks understandably cause CSS validators to complain that they are invalid. In a couple places, we also use bleeding-edge CSS features that aren't yet fully standardized, but these are used purely for progressive enhancement.
+
+These validation warnings don't matter in practice since the non-hacky portion of our CSS does fully validate and the hacky portions don't interfere with the proper functioning of the non-hacky portion, hence why we deliberately ignore these particular warnings.
+												        </div>
+												        <div style="display:inline-block;">
+												        <img src="images/ews1.jpg">
+														</div>	
+															<hr>
+														   <h2 class="headingcss">	
+
+														     WHAT DO WE DO????
+														     
+														     </h2>
+
+														       <div class="col-xs-offset-1 col-xs-10 homecontent" >
+												        	In order to provide the best possible experience to old and buggy browsers, Font Awesome uses CSS browser hacks in several places to target special CSS to certain browser versions in order to work around bugs in the browsers themselves. These hacks understandably cause CSS validators to complain that they are invalid. In a couple places, we also use bleeding-edge CSS features that aren't yet fully standardized, but these are used purely for progressive enhancement.
+
+These validation warnings don't matter in practice since the non-hacky portion of our CSS does fully validate and the hacky portions don't interfere with the proper functioning of the non-hacky portion, hence why we deliberately ignore these particular warnings.
+												        </div>
+																												
+										</div>
+
+												
+									
+						</div>
+
+				</div>		
+		
+		</div>
+
+
+	
+
+<script>
+// $(document).ready(function(){
+	
+// imagesChange(1);
+
+// });
+function imagesChange(imagenum)
+{
+	
+	var image="#image"+imagenum;
+	var dot="#dot"+imagenum;
+    setTimeout(function(){ 
+    	console.log("to hide:"+image);
+    	$(image).fadeOut("slow",function(){  
+    	$(dot).css("background","white");  
+if(imagenum==3)
+    	{
+    		imagenum=1;
+    	}
+    	else
+    	{
+    	imagenum++;
+    	}
+    	dot="#dot"+imagenum;
+    	$(dot).css("background","grey");  
+    	image="#image"+imagenum;
+    	console.log("to show:"+image);
+    	
+    	$(image).fadeIn();
+    	});
+    	
+
+	
+        
+console.log("hello");
+
+      imagesChange(imagenum);
+          
+         }, 3000);
+}
+
+</script>		
+	</body>
+</html>
